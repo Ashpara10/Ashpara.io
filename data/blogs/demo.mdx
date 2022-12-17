@@ -1,0 +1,30 @@
+---
+title: "Mastering React hooks UseEffect,useCallBack"
+description: "Exploring Data fectching methods and static site generation features in next js "
+image: "/nextc.png"
+createdAt: "2022-10-02"
+---
+
+## What is Typescript
+
+Typescript is a superset of javascript
+
+```ts
+import { useEffect, useState } from "react";
+
+const Home = ({ data }: { data: any }) => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const res = await fetch("https://ssr.com");
+    setUser(res.json());
+    return user;
+  }, [data]);
+
+  return (
+    <div>
+      <h1>Hello {user}</h1>
+    </div>
+  );
+};
+```

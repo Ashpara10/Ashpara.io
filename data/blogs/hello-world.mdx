@@ -1,0 +1,84 @@
+---
+title: "Why I started using Typescript and why you should too?"
+description: "Exploring Data fectching methods and static site generation features in next js "
+image: "/totoro.jpg"
+createdAt: "2022-02-27"
+---
+
+> Next.js has two forms of pre-rendering: [**Static Generation**](http://next.org) and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+
+# Creating a PlanetScale Database
+
+- Prevent SQL injection
+- How to create a PScale Db
+- Quering from a table
+
+note[^1]
+
+[^1]: Big note.
+
+## Strikethrough
+
+~one~ or ~~two~~ tildes.
+
+```jsx
+//index.js
+const BlogCard = ({ post }: BlogProps) => {
+  return (
+    <article className=" max-w-md  w-full flex flex-col items-center justify-center gap-y-2 overflow-hidden ">
+      <div className="w-full flex items-center justify-center">
+        <Image
+          width={500}
+          height={280}
+          quality={100}
+          objectFit={"contain"}
+          src={post.image}
+          className="rounded-md w-full"
+        />
+      </div>
+      <div className="w-full flex flex-col items-center justify-center gap-y-1.5">
+        <Link href={`/blog/${post.slug}`}>
+          <h2 className="text-2xl text-left font-bold ">{post.title}</h2>
+        </Link>
+
+        <span className=" w-full text-left font-mono dark:text-gray-300">
+          {new Date(post.createdAt).toLocaleDateString()}
+        </span>
+      </div>
+    </article>
+  );
+};
+
+export default BlogCard;
+```
+
+# Awesome Typescript classes
+
+```ts
+enum Note {
+  Error,
+  Loading,
+  Success,
+}
+// types
+type Note{
+  title:string,
+  content:string,
+  published:boolean
+  createdAt:string,
+  updatedAt:string,
+  slug:string
+}
+const Demo=({note}:{note:Note})=>{
+  return <h1 className="text-2xl font-bold">{note.title}</h1>
+}
+```
+
+## Why i transitioned to Typescript and why you should too!
+
+- **Typescript** - provides its retrictions and helps to identify bugs during development of your app.
+- **Security** -Why you should use TypeScript over [JavaScript](http://vitejs.dev)?
+- Image result for why to use typescript
+  In contrast to JavaScript, TypeScript code is more reliable and easier to refactor. This enables developers to evade errors and do rewrites much easier.
+
+You can [view the entire source code here](https://github.com/leerob/youtube-to-mp3). Happy coding! 😄

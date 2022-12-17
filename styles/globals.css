@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::root {
+  --bg-dark: #0f0f0f;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  scrollbar-gutter: thin;
+  @apply font-gro
+}
+
+pre,code{
+  scrollbar-width: thin
+}
+
+.navbar {
+  @apply w-full h-[60px] flex items-center justify-center py-2.5 px-6 bg-gray-50 z-10;
+}
+
+
+.nav-theme-btn{
+  @apply font-extrabold text-lg md:text-xl bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2  rounded-md font-mono
+}
+
+.nav-li {
+  @apply flex items-center justify-center py-1.5 px-3
+}
+
+
+pre {
+  @apply  bg-transparent
+}
+
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.punctuation {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+span{
+  @apply dark:text-white text-dark
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-green-700 dark:text-green-500;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-purple-700 dark:text-purple-500;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  @apply text-yellow-600 dark:text-yellow-500;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  @apply text-blue-700 dark:text-blue-500;
+}
+
+.token.function,
+.token.class-name {
+  @apply text-pink-700 dark:text-pink-500;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  @apply text-yellow-500;
+}
+
+/* .rehype-code-title{
+  @apply font-mono bg-gray-300 rounded-md p-2.5
+} */
+
+pre[class*="language-"] {
+  @apply overflow-x-auto whitespace-pre my-2 border border-gray-300 dark:border-bdark p-2.5 rounded-md  ;
+}
+
+.rehype-code-title {
+  @apply bg-bdark;
+}
+
+.MdxHeadings {
+  @apply prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl;
+}
+
+.MdxLists {
+  @apply prose-ul:max-w-xl prose-ul:mx-auto list-outside prose-ul:list-disc prose-ol:list-decimal;
+}
