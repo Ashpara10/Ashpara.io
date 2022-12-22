@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTheme } from "next-themes";
 import router from "next/router";
 import { BiMoon, BiSun } from "react-icons/bi";
-import useDelayedRender from "use-delayed-render";
+// import useDelayedRender from "use-delayed-render";
 import NavList from "./NavList";
 import NavItem from "./NavItem";
 import NavIcon from "./Icons/NavIcon";
@@ -11,7 +11,7 @@ import MenuIcon from "./Icons/MenuIcon";
 const Navbar: React.FC = ({ children }) => {
   const { theme, setTheme } = useTheme();
   const [nav, setNav] = useState(false);
-  const { rendered } = useDelayedRender(nav);
+  // const { rendered } = useDelayedRender(nav);
 
   const Router = (path: string) => {
     router.push(`/${path}`);
@@ -56,7 +56,7 @@ const Navbar: React.FC = ({ children }) => {
         />
       )}
 
-      <div
+      {/* <div
         className={`px-5 py-2 z-20 font-normal text-base w-64 translate-x-[-100%] overflow-hidden flex flex-col fixed top-0 left-0 bottom-0 bg-white/70 backdrop-blur-md border-r border-gray-300 dark:border-bdark dark:bg-dark/70 ${
           rendered
             ? "translate-x-0 transition-all"
@@ -92,7 +92,7 @@ const Navbar: React.FC = ({ children }) => {
             Snippets
           </li>
         </ul>
-      </div>
+      </div> */}
     </nav>
   );
 };
