@@ -2,30 +2,23 @@ import React, { useState } from "react";
 import { useTheme } from "next-themes";
 import router from "next/router";
 import { BiMoon, BiSun } from "react-icons/bi";
-// import useDelayedRender from "use-delayed-render";
 import NavList from "./NavList";
 import NavItem from "./NavItem";
-import NavIcon from "./Icons/NavIcon";
 import MenuIcon from "./Icons/MenuIcon";
 
 const Navbar: React.FC = ({ children }) => {
   const { theme, setTheme } = useTheme();
   const [nav, setNav] = useState(false);
-  // const { rendered } = useDelayedRender(nav);
-
-  const Router = (path: string) => {
-    router.push(`/${path}`);
-  };
 
   return (
-    <nav className="w-full md:fixed top-0 md:z-10 md:backdrop-blur-md bg-gray-50 md:bg-gray-50/70 dark:bg-dark md:dark:bg-dark/70 p-3 ">
+    <nav className="w-full md:fixed top-0 md:z-10 backdrop-blur-md bg-gray-50/40 dark:bg-dark/70  p-3 ">
       <div className="w-full flex items-center justify-center">
         <div>
           <NavList>
-            <NavItem>Home</NavItem>
-            <NavItem>About</NavItem>
-            <NavItem>Blog</NavItem>
-            <NavItem>Source</NavItem>
+            <NavItem onClick={() => router.push("/")}>Home</NavItem>
+            <NavItem onClick={() => router.push("/")}>About</NavItem>
+            <NavItem onClick={() => router.push("/blog")}>Blog</NavItem>
+            <NavItem onClick={() => router.push("/")}>Source</NavItem>
             <button
               className="nav-theme-btn  "
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}

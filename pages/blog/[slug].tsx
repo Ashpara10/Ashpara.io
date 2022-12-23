@@ -24,7 +24,7 @@ const BlogPost = ({ post, blogs }: { post: Blog; blogs: Blog[] }) => {
           <h1 className="font-bold w-full text-left mb-2 text-2xl md:text-3xl tracking-tight  text-dark dark:text-gray-50">
             {post.title}
           </h1>
-          <div className="w-full flex  items-center justify-between">
+          <div className="w-full flex  items-center justify-between mb-3">
             <div className="w-full flex items-center justify-between gap-x-1 ">
               <div className="flex items-center justify-center gap-x-1">
                 <div className="w-full px-4 flex gap-x-1 items-center justify-between">
@@ -39,7 +39,7 @@ const BlogPost = ({ post, blogs }: { post: Blog; blogs: Blog[] }) => {
             height={450}
             width={700}
             priority
-            className="w-full p-1.5 rounded-md "
+            className="w-full p-1.5 rounded-xl "
           />
           <div className="max-w-none  text-[#0b0b0b] w-full flex flex-col gap-y-5 px-1.5 ">
             <Component components={MdxComponent} />

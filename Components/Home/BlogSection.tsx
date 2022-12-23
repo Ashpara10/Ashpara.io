@@ -23,7 +23,7 @@ const BlogSection = () => {
                 loading="lazy"
               />
               <h1
-                className="px-4 pt-2 text-lg"
+                className="px-4 pt-2 text-xl"
                 onClick={() => router.push("/blog/[id]", `/blog/${data.slug}`)}
               >
                 {data.title}
