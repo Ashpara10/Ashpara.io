@@ -4,16 +4,19 @@ import "tailwindcss/tailwind.css";
 import { ThemeProvider } from "next-themes";
 import Layout from "../Components/layout";
 import Head from "next/head";
+import ContextProvider from "../Components/Context/contextProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
-      <Layout>
-        <Head>
-          <title>Ashpara</title>
-        </Head>
-        <Component {...pageProps} />
-      </Layout>
+      <ContextProvider>
+        <Layout>
+          <Head>
+            <title>Ashpara</title>
+          </Head>
+          <Component {...pageProps} />
+        </Layout>
+      </ContextProvider>
     </ThemeProvider>
   );
 }

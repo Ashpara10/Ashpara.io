@@ -2,29 +2,21 @@ import type { GetStaticProps, NextPage } from "next";
 import { allBlogs, Blog } from "../.contentlayer/generated";
 import { pick } from "@contentlayer/client";
 import BlogCard from "../Components/BlogCard";
-import React, { useState } from "react";
-import Fuse from "fuse.js";
+import { useState, useContext, useEffect } from "react";
+import context from "../Components/Context/context";
 
 const BlogPage = ({ posts }: { posts: Blog[] }) => {
-  const [search, setSearch] = useState("");
-
-  const options = {
-    includeScore: false,
-    keys: ["title", "body.raw", "description"],
-  };
-
-  const fuse = new Fuse(posts, options);
-
-  const result = fuse.search(String(search.length > 0 && search));
+  const c = useContext(context);
+  useEffect(() => {
+    console.log(c);
+  }, [c.search]);
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center">
       <section className="mt-10 max-w-2xl min-h-screen flex flex-col items-center justify-start gap-5">
-        {search.length > 0
-          ? result.map((data: any) => {
-              return <BlogCard key={data?.item.slug} post={data?.item} />;
-            })
-          : posts.map((data: Blog) => <BlogCard key={data.slug} post={data} />)}
+        {posts.map((data: Blog) => (
+          <BlogCard key={data.slug} post={data} />
+        ))}
       </section>
     </div>
   );
