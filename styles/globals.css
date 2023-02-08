@@ -6,6 +6,7 @@
 
 ::root {
   --bg-dark: #0f0f0f;
+  --light-code: rgb(255 251 235)
 }
 
 html,
@@ -18,7 +19,8 @@ body {
 }
 
 pre,code{
-  scrollbar-width: thin
+  scrollbar-width: none
+  
 }
 
 .navbar {
@@ -36,7 +38,7 @@ pre,code{
 
 
 pre {
-  @apply  bg-transparent
+  @apply  dark:bg-transparent bg-yellow-50
 }
 
 

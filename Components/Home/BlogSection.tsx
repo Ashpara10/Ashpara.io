@@ -16,14 +16,14 @@ const BlogSection = () => {
           return (
             <div className="mb-3 md:m-1" key={data._id}>
               <Image
-                className="rounded-3xl md:rounded-lg  border-2 dark:border-gray-300 -z-10"
+                className="rounded-3xl md:rounded-2xl  border-2 dark:border-gray-300 -z-10"
                 src={data.image}
                 width={550}
                 height={350}
                 loading="lazy"
               />
               <h1
-                className="px-4 pt-2 text-xl"
+                className="px-4  pt-2 text-lg"
                 onClick={() => router.push("/blog/[id]", `/blog/${data.slug}`)}
               >
                 {data.title}

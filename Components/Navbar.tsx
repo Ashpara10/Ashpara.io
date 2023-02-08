@@ -14,7 +14,7 @@ const Navbar: React.FC = ({ children }) => {
   const [q, setQ] = useState(c.search);
 
   return (
-    <nav className="w-full md:fixed top-0 md:z-10 backdrop-blur-md bg-gray-50/40 dark:bg-dark/70  p-3 ">
+    <nav className="w-full md:fixed top-0 md:z-10    p-3 ">
       <div className="w-full flex items-center justify-center">
         <div>
           <NavList>
@@ -34,7 +34,7 @@ const Navbar: React.FC = ({ children }) => {
       <div className="w-full flex md:hidden items-center justify-between p-3  absolute top-0 right-0 left-0 ">
         <button
           onClick={() => setNav(!nav)}
-          className=" font-extrabold rounded-lg text-xl text-gray-900 dark:text-gray-100 p-3"
+          className=" font-extrabold rounded-lg text-lg text-gray-900 dark:text-gray-100 p-2.5"
         >
           <MenuIcon />
         </button>
