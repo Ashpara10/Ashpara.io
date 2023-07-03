@@ -1,11 +1,7 @@
 import Image from "next/image";
 import router from "next/router";
 import React from "react";
-import useSWR from "swr";
 import { Blog } from "../.contentlayer/generated";
-import HeartIcon from "./Icons/HeartIcon";
-import ViewIcon from "./Icons/ViewIcon";
-import fetcher from "./lib/fetcher";
 
 type Views = {
   total: {
@@ -14,9 +10,7 @@ type Views = {
 };
 
 const BlogCard = ({ post }: { post: Blog }) => {
-  const { title, description, image } = post;
-  const { data }: any = useSWR(`/api/blog/view/${post.slug}`, fetcher);
-  const views = data?.total?.views.toString();
+  const { title, image } = post;
   return (
     <article className="max-w-sm overflow-hidden flex flex-col items-center justify-center  bg-gray-50 dark:bg-dark">
       <div className="px-2 py-2">

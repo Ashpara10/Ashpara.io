@@ -3,16 +3,39 @@ import Image from "next/image";
 const AboutPage = () => {
   return (
     <div className="w-full flex items-center justify-center min-h-screen">
-      <section className=" max-w-2xl flex items-center justify-center flex-col w-full p-3">
-        <h2 className="pl-1 w-full text-left mb-4 text-3xl font-bold">
+      <section className=" font-gro max-w-2xl flex items-center justify-center flex-col w-full p-3">
+        <h2 className=" w-full text-center mb-4 text-4xl font-bold">
           About Me{" "}
         </h2>
-        <Image
-          className="rounded-2xl "
-          src={"/totoro.jpg"}
-          width={700}
-          height={450}
-        />
+        <div className="w-full min-h-screen gap-3 grid grid-cols-2 md:grid-cols-3 ">
+          <span className="bg-bdark aspect-auto flex items-center justify-center rounded-xl row-span-1">
+            1
+          </span>
+          <span className="bg-bdark aspect-auto flex items-center justify-center rounded-xl row-span-1">
+            1
+          </span>
+          <span className="bg-bdark aspect-auto flex items-center justify-center rounded-xl row-span-1">
+            1
+          </span>
+          <span className="bg-bdark aspect-auto flex items-center justify-center rounded-xl row-span-1">
+            1
+          </span>
+          <span className="bg-bdark aspect-auto flex items-center justify-center rounded-xl row-span-1">
+            1
+          </span>
+          <span className="bg-bdark aspect-auto flex items-center justify-center rounded-xl row-span-1">
+            1
+          </span>
+          <span className="bg-bdark aspect-auto flex items-center justify-center rounded-xl row-span-1">
+            1
+          </span>
+          <span className="bg-bdark aspect-auto flex items-center justify-center rounded-xl row-span-1">
+            1
+          </span>
+          <span className="bg-bdark aspect-auto flex items-center justify-center rounded-xl row-span-1">
+            1
+          </span>
+        </div>
         <p className=" py-3 my-2">
           Ashwin is a beginner Indie Full-stack developer based in Indore,India
           with a passion for building and creating stuff that can be helpful to

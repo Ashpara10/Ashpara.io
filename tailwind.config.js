@@ -17,6 +17,7 @@ module.exports = {
         robo: ["Roboto", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         gro: ["Space Grotesk", "sans-serif"],
+        rubik:["Rubik","sans-serif"]
       },
     },
   },

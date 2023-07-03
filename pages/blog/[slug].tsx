@@ -12,6 +12,7 @@ const BlogPost = ({ post, blogs }: { post: Blog; blogs: Blog[] }) => {
   const recommendedBlogs = blogs.findIndex((p) => p.slug == post.slug);
   const nextBlog = blogs[recommendedBlogs + 1];
   const previousBlog = blogs[recommendedBlogs - 1];
+
   return (
     <div className="w-full flex flex-col items-center justify-center md:mx-auto">
       <Head>
@@ -19,9 +20,9 @@ const BlogPost = ({ post, blogs }: { post: Blog; blogs: Blog[] }) => {
         <meta name="title" content={post.title} />
         <meta name="description" content={post.description} />
       </Head>
-      <article className="max-w-2xl w-full flex flex-col items-center justify-center gap-y-2 mt-10">
+      <article className="max-w-2xl font-gro w-full flex flex-col items-center justify-center gap-y-2 mt-10">
         <div className="w-full flex flex-col gap-y-3 items-center justify-center">
-          <h1 className="font-bold w-full text-left mb-2 text-2xl md:text-3xl tracking-tight  text-dark dark:text-gray-50">
+          <h1 className="font-bold w-full  text-left mb-2 text-2xl md:text-3xl tracking-tight  text-dark dark:text-gray-50">
             {post.title}
           </h1>
           <div className="w-full flex  items-center justify-between mb-3">
@@ -47,22 +48,24 @@ const BlogPost = ({ post, blogs }: { post: Blog; blogs: Blog[] }) => {
         </div>
       </article>
       <div className="max-w-2xl w-full mt-12 flex justify-between items-center">
-        <div
-          className="flex justify-center items-center gap-x-2 px-3"
+        <button
+          disabled={typeof previousBlog == "undefined" ? true : false}
+          className="disabled:text-gray-400 flex justify-center items-center gap-x-2 px-3"
           onClick={() =>
             router.push("/blog/[slug]", `/blog/${previousBlog.slug}`)
           }
         >
           <IoChevronBack />
           Previous
-        </div>
-        <div
-          className="flex justify-center items-center gap-x-2 px-3"
+        </button>
+        <button
+          disabled={typeof nextBlog == "undefined" ? true : false}
+          className="disabled:text-gray-400 flex justify-center items-center gap-x-2 px-3"
           onClick={() => router.push("/blog/[slug]", `/blog/${nextBlog.slug}`)}
         >
           Next
           <IoChevronForward />
-        </div>
+        </button>
       </div>
     </div>
   );

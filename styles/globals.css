@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Space+Grotesk:wght@300;400;500;600;700&family=Rubik:wght@700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,18 +9,28 @@
   --light-code: rgb(255 251 235)
 }
 
+
 html,
 body {
+  /* scrollbar-width: thin; */
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
-  scrollbar-gutter: thin;
-  @apply font-gro
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
 }
 
-pre,code{
-  scrollbar-width: none
+pre   {
+  scrollbar-width: thin
   
+}
+.rehype-code-title {
+  
+  @apply bg-gray-300 text-black  dark:bg-bdark dark:text-white 
+  p-2 translate-y-8  rounded-t-md
+
 }
 
 .navbar {
@@ -29,7 +39,7 @@ pre,code{
 
 
 .nav-theme-btn{
-  @apply font-extrabold text-lg md:text-xl bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2  rounded-md font-mono
+  @apply font-extrabold text-lg md:text-xl bg-indigo-700 hover:bg-indigo-600 dark:bg-orange-200 text-white dark:text-black dark:hover:bg-orange-300 p-2  rounded-xl font-mono
 }
 
 .nav-li {
@@ -38,7 +48,7 @@ pre,code{
 
 
 pre {
-  @apply  dark:bg-transparent bg-yellow-50
+  @apply  bg-transparent 
 }
 
 
@@ -109,9 +119,7 @@ pre[class*="language-"] {
   @apply overflow-x-auto whitespace-pre my-2 border border-gray-300 dark:border-bdark p-2.5 rounded-md  ;
 }
 
-.rehype-code-title {
-  @apply bg-bdark;
-}
+
 
 .MdxHeadings {
   @apply prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl;

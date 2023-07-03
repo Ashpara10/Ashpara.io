@@ -2,13 +2,13 @@ import React, { MouseEventHandler } from "react";
 
 type NavItem = {
   children: React.ReactNode;
-  className?: string;
+  id?: string;
   onClick?: MouseEventHandler;
 };
 
-const NavItem = ({ children, className, onClick }: NavItem) => {
+const NavItem = ({ children, id, onClick }: NavItem) => {
   return (
-    <li onClick={onClick} className={`px-2 font-inter ${className}`}>
+    <li id={id} onClick={onClick} className={`px-2 font-gro  `}>
       {children}
     </li>
   );
