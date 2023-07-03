@@ -3,10 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const Layout: React.FC = (props) => {
-  useEffect(() => {
-    const navbar = document?.getElementById("navbar");
-    navbar?.classList.add("translate-y-0");
-  }, []);
   return (
     <div className="mt-14">
       <Header />

@@ -7,7 +7,7 @@ const BlogSection = () => {
   return (
     <section className="max-w-2xl font-gro w-full flex flex-col gap-y-3 ">
       <div className="w-full flex">
-        <span className="text-5xl px-2 my-4 w-full max-w-2xl text-center font-bold">
+        <span className="text-4xl md:text-5xl px-2 my-4 w-full max-w-2xl text-center font-bold">
           Popular Posts
         </span>
       </div>
